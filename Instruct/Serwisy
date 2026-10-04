@@ -1,0 +1,28 @@
+//Używanie serwisu na podstawie wygenerowanych z jasona pochodzącego z backendu
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';      
+import { Employee } from '../../api';
+
+
+//Potrzebne są HTTP ^ oraz Model pobierania z bazy
+
+@Injectable({
+  providedIn: 'root'
+})
+
+//Typowa struktura^
+
+export class EmployeesService {
+
+   private apiUrl = '/api/Employees';
+
+  constructor(private http: HttpClient) { }
+   getEmployees() {
+        
+        return this.http.get<Employee[]>(this.apiUrl);
+      }
+}
+
+//Struktura typowa z tym że trzeba załączyć nazwę z Endpointu
+//serwisu oraz model

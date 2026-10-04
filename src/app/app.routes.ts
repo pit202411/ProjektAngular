@@ -3,6 +3,7 @@ import { HelloComponent } from './components/hello/hello.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { EmployeesComponent } from './components/employees/employees.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 export const routes: Routes =  [
   { path: '', component: HelloComponent,
@@ -20,6 +21,11 @@ export const routes: Routes =  [
    {
     path: 'employees',
     component: EmployeesComponent
+  }
+   ,
+   {
+    path: 'categories',
+    component: CategoriesComponent
   }
   
   
