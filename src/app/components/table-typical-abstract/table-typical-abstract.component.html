@@ -1,0 +1,43 @@
+@if (data.length > 0) {
+
+  <table>
+    <thead>
+      <tr>
+
+        @for (column of columns; track column.field) {
+
+          <th [style.width]="column.width">
+            {{ column.header }}
+          </th>
+
+        }
+
+      </tr>
+    </thead>
+
+    <tbody>
+
+      @for (row of data; track $index) {
+
+        <tr>
+
+          @for (column of columns; track column.field) {
+
+            <td>
+              {{ formatValue(row, column) }}
+            </td>
+
+          }
+
+        </tr>
+
+      }
+
+    </tbody>
+  </table>
+
+} @else {
+
+
+
+}

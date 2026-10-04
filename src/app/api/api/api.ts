@@ -1,0 +1,13 @@
+export * from './categories.service';
+import { CategoriesService } from './categories.service';
+export * from './clients.service';
+import { ClientsService } from './clients.service';
+export * from './employees.service';
+import { EmployeesService } from './employees.service';
+export * from './products.service';
+import { ProductsService } from './products.service';
+export * from './sellingOrders.service';
+import { SellingOrdersService } from './sellingOrders.service';
+export * from './weatherForecast.service';
+import { WeatherForecastService } from './weatherForecast.service';
+export const APIS = [CategoriesService, ClientsService, EmployeesService, ProductsService, SellingOrdersService, WeatherForecastService];

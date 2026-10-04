@@ -1,0 +1,19 @@
+<button (click)="getVoivodeship()">
+  Pobierz województwa
+</button>
+@if (cities.length > 0) {
+
+  @for (city of cities; track city.id) {
+    <p>
+      ID: {{ city.id }} |
+      Nazwa: {{ city.name }} |
+      Poziom: {{ city.level }} |
+      Rodzic: {{ city.parentId }}
+    </p>
+  }
+
+} @else {
+
+  <p>Brak wczytanych województw.</p>
+
+}

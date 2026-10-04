@@ -1,0 +1,27 @@
+<div class="appLayout">
+
+  <div class="navPanel">
+    <h1>AngularApp</h1>
+
+    <div class="divHorizontal">
+      
+      <app-button text="Produkty" routerLink="/">
+       
+      </app-button>
+      <app-button  text="Klienci" routerLink="/clients">
+          
+      </app-button>
+
+      <app-button  text="Pracownicy" routerLink="/employees">
+          
+      </app-button>
+
+    
+    </div>
+  </div>
+
+  <div class="centralPanel">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
